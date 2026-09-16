@@ -14,10 +14,10 @@ from tkinter import (
 
 
 class Interface(Frame):
-    """ """
+    """Interface"""
 
     def __init__(self, window, **kwargs):
-        """ """
+        """__init__"""
         Frame.__init__(self, window, **kwargs)
 
         self.length_default = IntVar(value=16)
@@ -72,7 +72,7 @@ class Interface(Frame):
         self.output.pack()
 
     def generate(self):
-        """ """
+        """Generate the password, updates value attribute."""
         password = []
         chars = []
 
