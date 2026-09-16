@@ -1,6 +1,18 @@
+# tools
 .ropeproject
 .ruff_cache
-.venv
-*.lock
-.python-version
-__pycache__
+
+# uv
+.venv/
+
+# Python
+__pycache__/
+
+# build
+*.spec
+build/
+dist/
+PasswordGen.AppDir/usr/bin/*
+PasswordGen.AppDir/*.svg
+*/.DirIcon
+*.AppImage
