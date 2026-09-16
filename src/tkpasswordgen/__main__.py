@@ -22,7 +22,7 @@ class Interface(Frame):
 
         self.length_default = IntVar(value=16)
         self.length = Spinbox(window, from_=0, to=26, textvariable=self.length_default)
-        self.length.pack()
+        self.length.pack(pady=10)
 
         self.check_digits = BooleanVar()
         self.check_digits.set(True)
@@ -40,7 +40,7 @@ class Interface(Frame):
             onvalue=True,
             offvalue=False,
         )
-        self.digits.pack()
+        self.digits.pack(anchor="w")
         self.lowercase = Checkbutton(
             window,
             text="Lowercase letters [ a b c ... x y z ]",
@@ -48,7 +48,7 @@ class Interface(Frame):
             onvalue=True,
             offvalue=False,
         )
-        self.lowercase.pack()
+        self.lowercase.pack(anchor="w")
         self.uppercase = Checkbutton(
             window,
             text="Uppercase letters [ A B C ... X Y Z ]",
@@ -56,7 +56,7 @@ class Interface(Frame):
             onvalue=True,
             offvalue=False,
         )
-        self.uppercase.pack()
+        self.uppercase.pack(anchor="w")
         self.special = Checkbutton(
             window,
             text="Special characters [ ~ ! @ # $ % ^ & * ( ) - _ = + [ ] { } ; : , . < > / ? | ]",
@@ -64,12 +64,12 @@ class Interface(Frame):
             onvalue=True,
             offvalue=False,
         )
-        self.special.pack()
+        self.special.pack(anchor="w")
         self.generate_btn = Button(window, text="Generate", command=self.generate)
-        self.generate_btn.pack()
+        self.generate_btn.pack(side="left", padx=10)
         self.value = StringVar()
         self.output = Entry(window, textvariable=self.value, width=30)
-        self.output.pack()
+        self.output.pack(side="left", padx=10)
 
     def generate(self):
         """Generate the password, updates value attribute."""
@@ -93,6 +93,15 @@ class Interface(Frame):
 
 
 window = Tk()
+window.geometry("450x200")
+window.resizable(False, False)
+window.option_add("*Background", "#2E3440")
+window.option_add("*Foreground", "#ECEFF4")
+window.option_add("*Font", "Helvetica 10")
+window.option_add("*Label.Background", "#3B4252")
+window.option_add("*Checkbutton.borderWidth", 0)
+window.option_add("*Checkbutton.highlightThickness", 0)
+window.configure(bg="#2E3440")
 window.title("Password generator")
 interface = Interface(window)
 interface.mainloop()
