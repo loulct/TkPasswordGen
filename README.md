@@ -2,7 +2,7 @@
 
 ## Releases
 
-
+- [0.1.0](https://github.com/loulct/TkPasswordGen/releases/tag/0.1.0)
 
 ## Install Dependencies
 
