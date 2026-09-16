@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from tkpasswordgen!")
+from . import __main__
+
+__all__ = ["__main__"]

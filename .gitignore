@@ -1,6 +1,6 @@
-.git
 .ropeproject
 .ruff_cache
 .venv
 *.lock
 .python-version
+__pycache__
